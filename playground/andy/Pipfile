@@ -7,6 +7,8 @@ name = "pypi"
 jsonlines = "*"
 openai = "*"
 python-dotenv = "*"
+markdown = "*"
+bs4 = "*"
 
 [dev-packages]
 
