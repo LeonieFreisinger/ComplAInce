@@ -12,8 +12,9 @@
 
 ### useful links
 whole setup: https://chatbotslife.com/deploying-transformer-models-1350876016f
-tutorial heruko: https://www.tutlinks.com/create-and-deploy-fastapi-app-to-heroku/
+tutorial heruko: https://davedodea.medium.com/how-to-deploy-a-python-app-to-heroku-12289912f29c
 tutorial fastAPI: https://towardsdatascience.com/create-your-first-rest-api-in-fastapi-e728ae649a60
+pipenv commands: https://realpython.com/pipenv-guide/
 
 ## backend code
 ### pipeline

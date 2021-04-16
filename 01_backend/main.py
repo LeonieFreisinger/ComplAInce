@@ -48,7 +48,7 @@ session_prompt ="I am a highly intelligent question answering bot. If you ask me
 # print(" teststory_2: ", teststory_2)
 
 ## functions
-def ask(question, chat_log=None):
+def ask_completion(question, chat_log=None):
     """
     this function ask a question to the gpt3 enigne
     input: 
@@ -59,9 +59,11 @@ def ask(question, chat_log=None):
     story - str
 
     """
+    #doc_text = "The rules on the prohibition of corruption also apply without exception to so-called facilitation payments, as these are equally detrimental and usually pave the way for even more serious corruption issues. At the same time, Siemens has an obligation to ensure safe working conditions. General principles: Facilitation payments are prohibited. ▌	However, no employees are expected to risk life, limb or liberty in the course of performing their duties. Unjustified payments under duress will not be punished with disciplinary action. They must be reported in accordance with this section which also contains more detailed guidance."
     prompt_text = f'{chat_log}{restart_sequence}{question}{start_sequence}'
     response = openai.Completion.create(
         engine="davinci",
+        #documents": doc_text,
         prompt=prompt_text,
         temperature=0.8,
         max_tokens=150,
@@ -95,13 +97,13 @@ def append_interaction_to_chat_log(question, answer, chat_log=None):
 chat_log = session_prompt
 question_1 = "Who are you?"
 print("question_1: ",question_1)
-answer_1 = ask (question_1, chat_log)
+answer_1 = ask_completion (question_1, chat_log)
 print("answer1: ",answer_1)
 chat_log = append_interaction_to_chat_log(question_1, answer_1, chat_log)
 #print(chat_log)
 question_2 = "What is your daily routine?"
 print("question_2: ",question_2)
-answer_2 = ask (question_2, chat_log)
+answer_2 = ask_completion (question_2, chat_log)
 print("answer2: ",answer_2)
 chat_log = append_interaction_to_chat_log(question_2, answer_2, chat_log)
 #print(chat_log)
@@ -126,7 +128,7 @@ class Query(BaseModel):
 ## endpoints 
 @app.post('/send_question')
 async def send_question(query: Query):
-    answer_api = ask(query.question, chat_log)
+    answer_api = ask_completion(query.question, chat_log)
     #query.answer_out = {"answer": answer_api}
     return {"answer": answer_api}
 
