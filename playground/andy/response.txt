@@ -1,0 +1,12 @@
+{
+  "answers": [
+    "The term \"gift\" is not defined in the FCPA. The FCPA does not prohibit the payment of legitimate expenses related to travel, such",
+    "The term \"gift\" is not defined in the FCPA. The FCPA does not prohibit the payment of legitimate expenses related to travel, such",
+    "The term \"gift\" is not defined in the FCPA. The FCPA does not prohibit the payment of legitimate expenses related to travel, such"
+  ],
+  "completion": "cmpl-2pKYwdiLrnCdwb0A4ZY86oRqqSoh8",
+  "model": "davinci:2020-05-03",
+  "object": "answer",
+  "search_model": "ada",
+  "selected_documents": []
+}
