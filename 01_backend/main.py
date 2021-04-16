@@ -70,6 +70,7 @@ def ask(question, chat_log=None):
         presence_penalty=0.3,
         stop=["\n"]
     )
+    #print(response)
     story = response['choices'][0]['text']
     return str(story)
 
@@ -113,7 +114,7 @@ app = FastAPI() #app is an instance of teh class FastAPI()
 ## class definitions
 class Query(BaseModel):
     question:str
-    answer_out: Optional[str] = None
+    #answer_out: Optional[str] = None
     
 
 # class ContactOut(BaseModel):
@@ -126,8 +127,8 @@ class Query(BaseModel):
 @app.post('/send_question')
 async def send_question(query: Query):
     answer_api = ask(query.question, chat_log)
-    query.answer_out = {"answer": answer_api}
-    return query.answer_out 
+    #query.answer_out = {"answer": answer_api}
+    return {"answer": answer_api}
 
 ### further
 # @app.get("/") # decorator 
