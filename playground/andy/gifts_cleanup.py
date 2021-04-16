@@ -38,6 +38,8 @@ raw = raw.split('---')
 raw = ''.join(raw)
 raw = raw.split('_')
 raw = ' '.join(raw)
+raw = raw.split('"')
+raw = ''.join(raw)
 raw = raw.split(' ')
 raw = [el for el in raw if not el == '']
 raw = ' '.join(raw)

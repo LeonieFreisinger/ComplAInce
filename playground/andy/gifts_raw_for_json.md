@@ -1,43 +1,40 @@
 ## 1. Gifts and Hospitality
 
-Gifts and Hospitality includes all business-related benefits such as gifts, meals, entertainment, payment of travel and lodging expenses, trade fair tickets or other contributions without consideration. Under certain circumstances, providing or accepting Gifts and Hospitality could create the appearance of impropriety or even be considered as corruption. To minimize risks for [employees](https://webbooks.siemens.com/public/LC/chen/index.htm?n=General-Introduction,2.-Definitions-and-Abbreviations) and company related to benefits, every employee must comply with the following [general principles](#_Guidance_on_general) and requirements when offering or accepting benefits:
-
-| **[General principles](#_Guidance_on_general) –** Gifts and Hospitality must
-- Be in accordance with applicable **laws and regulations** and mindful of **internal rules** that the recipient, especially [government officials](https://webbooks.siemens.com/public/LC/chen/index.htm?n=General-Introduction,2.-Definitions-and-Abbreviations), might have.
-- Be provided or received in a **transparent** manner and correctly recorded in the financial books and records.
-- Be **appropriate** in terms of type, value, and frequency to the occasion and the position of the recipient.
-- Not be offered, provided, demanded, or accepted with the **expectation** of any type of advantage.
-- **Never give the** appearance **of dishonesty or inappropriateness.**
+Gifts and Hospitality includes all business-related benefits such as gifts, meals, entertainment, payment of travel and lodging expenses, trade fair tickets or other contributions without consideration. Under certain circumstances, providing or accepting Gifts and Hospitality could create the appearance of impropriety or even be considered as corruption. To minimize risks for employees and company related to benefits, every employee must comply with the following general principles and requirements when offering or accepting benefits. Gifts and Hospitality must be in accordance with applicable laws and regulations and mindful of internal rules that the recipient, especially government officials, might have.
+Gifts and Hospitality must be provided or received in a transparent manner and correctly recorded in the financial books and records.
+- Be appropriate in terms of type, value, and frequency to the occasion and the position of the recipient.
+- Not be offered, provided, demanded, or accepted with the expectation of any type of advantage.
+- Never give the appearance of dishonesty or inappropriateness.
  |
 | --- |
 
-| **In addition to our [general principles](#_Guidance_on_general)**
-- **A prior [SpoDoM-Approval](#_1.3._Approval_for) is required for offering or granting invitations to[Entertainment Events](#_1.2.2._Entertainment_Events*), reimbursement of [Lodging or Non-Local Travel Costs](#_1.2.3._Travel_and), or Other Contributions without Consideration of a value of EUR 20,000 or more**
+| In addition to our [general principles](#_Guidance_on_general)
+- A prior [SpoDoM-Approval](#_1.3._Approval_for) is required for offering or granting invitations to[Entertainment Events](#_1.2.2._Entertainment_Events*), reimbursement of [Lodging or Non-Local Travel Costs](#_1.2.3._Travel_and), or Other Contributions without Consideration of a value of EUR 20,000 or more
 
-  - to **Government Officials** and their **Related Parties** , **Government Entities** , **Healthcare Providers,** members of a **purchasing department** orbeneficiaries that are **involved in important business decisions** (**[Risk Groups](#_1.3._Process_and)**),
-  - if no **[exception](#_1.3._Process_and)** applies.
+  - to Government Officials and their Related Parties , Government Entities , Healthcare Providers, members of a purchasing department orbeneficiaries that are involved in important business decisions ([Risk Groups](#_1.3._Process_and)),
+  - if no [exception](#_1.3._Process_and) applies.
 
 - No SpoDoM-Approval is required for offering or granting[Gifts and Meals](#_1.2.1._Gifts_and), reimbursement of [Local Travel Costs](#LocalTravel), or for accepting [Benefits](#_1.2._Types_of).
-- **[Gifts of money](#_1.2.1._Gifts_and)** are prohibited unless a prior written **approval of the Compliance Officer** is granted.
+- [Gifts of money](#_1.2.1._Gifts_and) are prohibited unless a prior written approval of the Compliance Officer is granted.
  |
 | --- |
 
   1.
 ### Guidance on general principles
 
-**Gifts and Hospitality must not be offered, provided, demanded, or accepted with the expectation of any type of advantage.**
+Gifts and Hospitality must not be offered, provided, demanded, or accepted with the expectation of any type of advantage.
 
 Employees must not provide or accept a gift or other benefit before checking it against our general principles. Already a promise or demand of Gifts and Hospitality with the expectation of an advantage (e.g. preferential treatment in competition with other companies) can be illegal.
 
-**Gifts and Hospitality must never give the appearance of dishonesty or inappropriateness.**
+Gifts and Hospitality must never give the appearance of dishonesty or inappropriateness.
 
 Employees must refrain from any actions that could create an appearance of bad faith or inappropriateness, even if such actions are not illegal.
 
-**Gifts and Hospitality must be in accordance with applicable laws and regulations and mindful of internal rules that the recipient, especially government officials, might have.**
+Gifts and Hospitality must be in accordance with applicable laws and regulations and mindful of internal rules that the recipient, especially government officials, might have.
 
 The local rules of the country in which the benefit is provided is the starting point for evaluating compliance with applicable laws. If the recipient of the benefit does not live in this country, employees shall double-check the rules for the home country of the recipient as to whether any specific local rules apply, such as the prohibition of certain benefits or limits on the value of benefits. Most national laws require their nationals to adhere to the anti-corruption rules of their home country also when being abroad. National laws can vary considerably as to the prohibition of Gifts and Hospitality. In some countries, it may even be obligatory to comply with the internal rules of recipient`s organization, especially in the public sector (Government Officials and their Related Parties). Providing inappropriate gifts or hospitality to [Government Officials](https://webbooks.siemens.com/public/LC/chen/index.htm?n=General-Introduction,2.-Definitions-and-Abbreviations) and their [Related Parties](https://webbooks.siemens.com/public/LC/chen/index.htm?n=General-Introduction,2.-Definitions-and-Abbreviations) is prohibited and punishable by law.
 
-- **Information to / Authorization by the Superior of the Beneficiary**
+- Information to / Authorization by the Superior of the Beneficiary
 
 Local law or the internal rules, especially in the public sector, might also require that the superior of the beneficiary or a competent entity be informed or their authorization is needed. Depending on the circumstances and local standards, Siemens employees offering benefits should use appropriate, customized wording in their communication with the beneficiary, such as:
 
@@ -54,24 +51,24 @@ Employees might also use an invitation and registration tool, if available, and 
 
 If appropriate, the employee might disclose the value of the [benefit](#_1.2._Types_of) in the invitation or offering. In addition, the employee might offer the beneficiary that he/she may choose to cover part of the costs, e.g. for accommodation and/or travelling to reduce the benefit to an amount which can be accepted by the beneficiary.
 
-**Gifts and Hospitality must be appropriate in terms of type, value, and frequency to the occasion and the position of the recipient.**
+Gifts and Hospitality must be appropriate in terms of type, value, and frequency to the occasion and the position of the recipient.
 
 The appropriateness of a benefit is judged based on all circumstances of the specific occasion, and in accordance with local law and standards. This encompasses the value of the benefit and the occasion on which it is offered, its frequency, the transparency with which it is processed and the position of the beneficiary, in particular whether the recipient will be responsible for making a business decision of significance to Siemens in the near future or has taken such decision in the recent past. The internal rules of the recipient&#39;s organization may also provide assurance as to what is considered appropriate under local standards.
 
-**Gifts and Hospitality must be provided or received in a transparent manner and correctly recorded in the financial books and records.**
+Gifts and Hospitality must be provided or received in a transparent manner and correctly recorded in the financial books and records.
 
 Employees shall confer the benefit in such a way that it is obvious to the recipient&#39;s employer, line manager or colleagues, and that its nature and value can be verified. Conferring a benefit in secret creates the suspicion of an improper motive on the part of the giver. Employees shall therefore send gifts and invitations to the business address rather than the private address of the recipient, and shall use the company letterhead for the covering letter.
 
 | ![](RackMultipart20210416-4-14ponko_html_3c4e5308b91bb501.png)
- | **Please note:** _&quot;In case of benefits offered or granted jointly with third parties, the overall situation including the benefits offered or granted/financed by the third parties shall be assessed.&quot;_ |
+ | Please note: _&quot;In case of benefits offered or granted jointly with third parties, the overall situation including the benefits offered or granted/financed by the third parties shall be assessed.&quot;_ |
 | --- | --- |
 
 ### 1.2. Types of Benefits
 
 | ![](RackMultipart20210416-4-14ponko_html_3c4e5308b91bb501.png)
- | **Benefits** are any economic and non-economic advantages
- which improve the recipients&#39;/beneficiaries&#39; position. **Economic benefits** are money or tangible non-monetary benefits
- such as [Gifts and Meals (A.1.2.1.),](#_1.2.1._Gifts_and)[Entertainment Events (A.1.2.2.)](#_1.2.2._Entertainment_Events*) or [Travel and Lodging (A.1.2.3.)](#_1.2.3._Travel_and)as well as [Other Contributions without Consideration (A.1.2.4.).](#_1.2.4._Other_Contributions) **Non-economic benefits** are any other advantages. They may include,
+ | Benefits are any economic and non-economic advantages
+ which improve the recipients&#39;/beneficiaries&#39; position. Economic benefits are money or tangible non-monetary benefits
+ such as [Gifts and Meals (A.1.2.1.),](#_1.2.1._Gifts_and)[Entertainment Events (A.1.2.2.)](#_1.2.2._Entertainment_Events*) or [Travel and Lodging (A.1.2.3.)](#_1.2.3._Travel_and)as well as [Other Contributions without Consideration (A.1.2.4.).](#_1.2.4._Other_Contributions) Non-economic benefits are any other advantages. They may include,
  for example, a job or an internship for the recipient or the recipient&#39;s
 [Related Parties](https://webbooks.siemens.com/public/LC/chen/index.htm?n=General-Introduction,2.-Definitions-and-Abbreviations), the granting of a permit or an introduction to
  certain influential people [(A.1.2.5.).](#_1.2.5._Dealing_with) |
@@ -80,73 +77,73 @@ Employees shall confer the benefit in such a way that it is obvious to the recip
 ### 1.2.1. Gifts and Meals
 
 | ![](RackMultipart20210416-4-14ponko_html_3c4e5308b91bb501.png)
- | A **Gift** is a present or something that is given to an individual
- without payment. **Meals** include food and drinks. |
+ | A Gift is a present or something that is given to an individual
+ without payment. Meals include food and drinks. |
 | --- | --- |
 
-**Meals as Entertainment Events**
+Meals as Entertainment Events
 
 If Meals are combined with additional benefits, they might be considered an [Entertainment Event](#_1.2.2._Entertainment_Events*). In such case the Meal and any additional benefits must be handled in their entirety as an Entertainment Event.
 
-**Gifts of Money**
+Gifts of Money
 
 Gifts of money encompass any benefit of a nature comparable to a monetary gift, for example, checks, shares, bonds or credit notes for a monetary amount, as well as vouchers for goods that can be redeemed in cash. Vouchers for goods that cannot be redeemed in cash, or fuel vouchers for a specific quantity of a specific type of gasoline are not considered monetary gifts.
 
-Gifts of money generally create the appearance of bad faith or impropriety. Therefore, such gifts require the prior written **approval** of the responsible Compliance Officer even where they are permitted under local law.
+Gifts of money generally create the appearance of bad faith or impropriety. Therefore, such gifts require the prior written approval of the responsible Compliance Officer even where they are permitted under local law.
 
-**Specific Principles**
+Specific Principles
 
 Besides the [general principles](#_1.1_Guidance_on) and possibly [country or industry specific requirements](#_1.5._Specific_Requirements*)Siemens does not make gifts in illegally traded wildlife products, e.g. rhino horn, ivory and tiger, and does not accept such gifts from third parties.
 
-**SpoDoM-Approval**
+SpoDoM-Approval
 
 Providing Meals or Gifts to third parties does not require prior SpoDoM-Approval.
 
 ### 1.2.2. Entertainment Events
 
 | ![](RackMultipart20210416-4-14ponko_html_3c4e5308b91bb501.png)
- | An **Entertainment Event** comprises any event where the price is not
+ | An Entertainment Event comprises any event where the price is not
 only paid for food and drinks but includes, for example, an (implicit) supplement
  for music or other entertainment. This encompasses folk festivals. |
 | --- | --- |
 
-**Specific Principles**
+Specific Principles
 
 Besides the [general principles](#_1.1_Guidance_on) and possibly [country or industry specific requirements](#_1.5._Specific_Requirements*), Entertainment Events shall comply with the following standards:
 
-- Wherever possible, the Entertainment Event shall be **part of a business program** ;
-- Review and **approval by the manager** responsible according to applicable signature regulations must be **documented**. The manager shall review whether the intended activity is in line with Siemens rules as set out in these instructions;
-- Tickets must be acquired **via official sales offers** , not on the black market.
+- Wherever possible, the Entertainment Event shall be part of a business program ;
+- Review and approval by the manager responsible according to applicable signature regulations must be documented. The manager shall review whether the intended activity is in line with Siemens rules as set out in these instructions;
+- Tickets must be acquired via official sales offers , not on the black market.
 
-**SpoDoM-Approval**
+SpoDoM-Approval
 
 Regarding a SpoDoM-Approval for providing Entertainment Events to Government Officials and their Related Parties, Healthcare Providers, members of a purchasing department or beneficiaries that are involved in important business decisions (Risk Groups) see [Chapter A 1.3](#_1.3._Process_and).
 
 ### 1.2.3. Travel and Lodging Costs
 
 | ![](RackMultipart20210416-4-14ponko_html_3c4e5308b91bb501.png)
- | **Travel and Lodging Costs** for third parties are e.g. costs for
+ | Travel and Lodging Costs for third parties are e.g. costs for
  inspection tours, acceptance visits, training. |
 | --- | --- |
 
-**Exceptions**
+Exceptions
 
-The reimbursement of travel costs for **job applicants** is not considered a benefit for the purposes of these instructions. The same applies for occasionally and spontaneously driving employees of customers or other third parties or giving these persons a lift in one&#39;s own taxi. However, this exemption does not apply for arrangements to drive someone repeatedly.
+The reimbursement of travel costs for job applicants is not considered a benefit for the purposes of these instructions. The same applies for occasionally and spontaneously driving employees of customers or other third parties or giving these persons a lift in one&#39;s own taxi. However, this exemption does not apply for arrangements to drive someone repeatedly.
 
-The reimbursement of travel and lodging costs incurred by a **service provider** that are necessarily implied in providing a service ordered by and performed for Siemens does not constitute a benefit in the sense of these instructions. Costs shall however only be reimbursed if reimbursement has been agreed in advance, for example by means of a contract or a purchase order.
+The reimbursement of travel and lodging costs incurred by a service provider that are necessarily implied in providing a service ordered by and performed for Siemens does not constitute a benefit in the sense of these instructions. Costs shall however only be reimbursed if reimbursement has been agreed in advance, for example by means of a contract or a purchase order.
 
-The same applies for **conference speakers** who have been invited to present a subject on behalf of Siemens on a conference or a congress. The reimbursement of these implied travel and lodging costs does not constitute a benefit in the sense of these instructions. However, specific regulations and reporting requirements may apply if the invited person works in the [public sector](#PublicSector) or is a [Healthcare Provider](#_1.4.2._Specific_requirements). In such cases, [the applicable local and industry specific regulations](#_1.5._Specific_Requirements*) must be checked or the responsible Compliance Officer shall be contacted.
+The same applies for conference speakers who have been invited to present a subject on behalf of Siemens on a conference or a congress. The reimbursement of these implied travel and lodging costs does not constitute a benefit in the sense of these instructions. However, specific regulations and reporting requirements may apply if the invited person works in the [public sector](#PublicSector) or is a [Healthcare Provider](#_1.4.2._Specific_requirements). In such cases, [the applicable local and industry specific regulations](#_1.5._Specific_Requirements*) must be checked or the responsible Compliance Officer shall be contacted.
 
-**Specific Principles**
+Specific Principles
 
 Besides the [general principles](#_Guidance_on_general) and possibly [country or industry specific requirements](#_1.5._Specific_Requirements*), reimbursing Travel and Lodging Costs for third parties shall comply with the following standards:
 
-- The reimbursement itself (instead of a payment by the third party itself), the number and function of the persons (e.g. few or many, with or without spouses) as well as the standard of the travel (e.g. economy or business class) and lodging (e.g. three or four star hotel) and their duration must be justified by a **legitimate business purpose**.
-- The costs need to be **proportional** compared to what is received in return (the standard of travel and lodging, the travelling duration, as well as number of travelling persons).
-- Cost reimbursements may **not be**  **made to private bank accounts** or to individual persons **or to third parties** (other than the employer of the beneficiary) for forwarding to the beneficiaries.
-- Because **travel agencies** can be used to create slush funds, employees shall avoid reimbursement of costs for travelling or entertainment arranged by travel agencies for employees of the customer or other third party if Siemens has no sufficient control over the arrangements and their execution. In case the use of a travel agency is necessary, employees shall select agencies with high integrity and insist on an itemized, detailed proof of service and receipts of accommodation and travel providers.
+- The reimbursement itself (instead of a payment by the third party itself), the number and function of the persons (e.g. few or many, with or without spouses) as well as the standard of the travel (e.g. economy or business class) and lodging (e.g. three or four star hotel) and their duration must be justified by a legitimate business purpose.
+- The costs need to be proportional compared to what is received in return (the standard of travel and lodging, the travelling duration, as well as number of travelling persons).
+- Cost reimbursements may not be  made to private bank accounts or to individual persons or to third parties (other than the employer of the beneficiary) for forwarding to the beneficiaries.
+- Because travel agencies can be used to create slush funds, employees shall avoid reimbursement of costs for travelling or entertainment arranged by travel agencies for employees of the customer or other third party if Siemens has no sufficient control over the arrangements and their execution. In case the use of a travel agency is necessary, employees shall select agencies with high integrity and insist on an itemized, detailed proof of service and receipts of accommodation and travel providers.
 
-**Local vs. Non-Local Travel Cost**
+Local vs. Non-Local Travel Cost
 
 As local travel costs do not require a SpoDoM-Approval, it is important to distinguish between local and non-local travel costs.
 
@@ -154,31 +151,31 @@ Crossing a country border does not per se imply that the travel must be consider
 
 Siemens regional companies may further define what falls under &quot;local travel&quot; for their respective country (for example with reference to a specific monetary threshold or a threshold regarding distance, means of transportation or otherwise). If there are various Siemens companies in the same country, the country specific definition shall be aligned among them. Country specific definitions of what is considered &quot;local travel&quot; shall be notified to the contact persons for gifts and hospitality at LC CO PT and LC CO RFC LF and shall be made available via the Compliance intranet.
 
-**SpoDoM-Approval**
+SpoDoM-Approval
 
 Regarding a SpoDoM-Approval for providing lodging or non-local travel to Government Officials and their Related Parties, Healthcare Providers, members of a purchasing department or beneficiaries that are involved in important business decisions (Risk Groups) see [Chapter A 1.3.](#_1.3._Process_and)
 
 #### 1.2.3.1. Daily Allowances
 
 | ![](RackMultipart20210416-4-14ponko_html_3c4e5308b91bb501.png)
- | **Daily Allowances** are intended for reimbursement of daily travel and lodging costs. |
+ | Daily Allowances are intended for reimbursement of daily travel and lodging costs. |
 | --- | --- |
 
-**Specific Principles**
+Specific Principles
 
 Besides the [general principles](#_Guidance_on_general) and the [specific principles for travel and lodging costs](#TravelCostSpecificPrinciples), Daily Allowances for third parties shall comply with the following standards:
 
-- The occasion and the amount shall, where possible, be **specified in the customer contract or tender documents**. If a Daily Allowance is requested but not yet specified, occasion and amount shall be made transparent to the customer and aligned with an authorized representative of the customer and the supervisor of the beneficiary. Try to amend the contract. Have the customer guarantee if possible in the contract that the requested Daily Allowances are in line with local law;
-- In case the customer did **not determine the amount** of the Daily Allowance, use the travel reimbursement guidelines of the customer for the country the Daily Allowance is granted as a guideline for what is adequate. Should the customer not have such a guideline, use Siemens travel guidelines for the country the Daily Allowance is granted;
-- In case an authorized representative of the **customer requests** Siemens **to transfer the Daily Allowance to his employees directly** for legitimate reasons (e.g. money transfer or currency restrictions) indicating the account number(s), Daily Allowances may be paid to individual accounts, unless such transfer infringes applicable law or Siemens rules. The beneficiary must acknowledge the receipt. Customer&#39;s request and beneficiary&#39;s receipt must be documented. In all communications accompanying a payment or reimbursement, it must be clearly stated that it is being made to a recipient organization and not for the benefit of an individual person;
-- If payment of Daily Allowances to a **third party** for **forwarding to the beneficiaries** is absolutely necessary for legitimate reasons (e.g. money transfer or currency restrictions), confirm this with the customer and have the customer certify that this is in line with local law. Customer confirmation and receipt of the Daily Allowance by the beneficiaries shall be documented;
-- The beneficiary shall be reminded that the Daily Allowance might have to be **declared under local tax laws** and that Siemens does not take over the tax. The customer or the beneficiary must evaluate and implement any such requirement;
-- There are additional prerequisites for **handing out cash** as set forth in [Siemens Circular No. 208](https://circulars.siemens.com/content/circulars/ca/_layouts/querplex/circularapplication/documents/CircularDownload.aspx?id=sc_208.pdf). Avoid handing out cash, see also Chapter C.
+- The occasion and the amount shall, where possible, be specified in the customer contract or tender documents. If a Daily Allowance is requested but not yet specified, occasion and amount shall be made transparent to the customer and aligned with an authorized representative of the customer and the supervisor of the beneficiary. Try to amend the contract. Have the customer guarantee if possible in the contract that the requested Daily Allowances are in line with local law;
+- In case the customer did not determine the amount of the Daily Allowance, use the travel reimbursement guidelines of the customer for the country the Daily Allowance is granted as a guideline for what is adequate. Should the customer not have such a guideline, use Siemens travel guidelines for the country the Daily Allowance is granted;
+- In case an authorized representative of the customer requests Siemens to transfer the Daily Allowance to his employees directly for legitimate reasons (e.g. money transfer or currency restrictions) indicating the account number(s), Daily Allowances may be paid to individual accounts, unless such transfer infringes applicable law or Siemens rules. The beneficiary must acknowledge the receipt. Customer&#39;s request and beneficiary&#39;s receipt must be documented. In all communications accompanying a payment or reimbursement, it must be clearly stated that it is being made to a recipient organization and not for the benefit of an individual person;
+- If payment of Daily Allowances to a third party for forwarding to the beneficiaries is absolutely necessary for legitimate reasons (e.g. money transfer or currency restrictions), confirm this with the customer and have the customer certify that this is in line with local law. Customer confirmation and receipt of the Daily Allowance by the beneficiaries shall be documented;
+- The beneficiary shall be reminded that the Daily Allowance might have to be declared under local tax laws and that Siemens does not take over the tax. The customer or the beneficiary must evaluate and implement any such requirement;
+- There are additional prerequisites for handing out cash as set forth in [Siemens Circular No. 208](https://circulars.siemens.com/content/circulars/ca/_layouts/querplex/circularapplication/documents/CircularDownload.aspx?id=sc_208.pdf). Avoid handing out cash, see also Chapter C.
 
 ### 1.2.4. Other Contributions without Consideration
 
 | ![](RackMultipart20210416-4-14ponko_html_3c4e5308b91bb501.png)
- | **Other Contributions Without Consideration** include any
+ | Other Contributions Without Consideration include any
 voluntary contributions to entities (as opposed to individuals) in
  money or in kind without consideration that have a commercial
  background, such as an existing business relationship with the
@@ -191,7 +188,7 @@ Siemens provides Contributions with commercial background to existing or potenti
 
 For example, a contribution to a customer&#39;s or supplier&#39;s company party would qualify as &quot;Other Contribution without Consideration&quot;. A contribution is still considered &quot;without Consideration&quot; if Siemens is offered a consideration in return that is of no or little value to Siemens.
 
-**Exceptions**
+Exceptions
 
 The following expenditures do not qualify as Other Contribution without Consideration:
 
@@ -204,7 +201,7 @@ The following expenditures do not qualify as Other Contribution without Consider
   - are implemented as part of a research partnership in accordance with [Siemens Circular No. 212](https://circulars.siemens.com/documents/CircularDownload.aspx?ID=SC_212.pdf), in which Siemens has obtained defined considerations, such as rights to use the research results.
 - Sponsoring Activities, Memberships, Donations and Charitable Contributions provided to third party corporations and other external entities are governed by [Siemens Circular No. 186](https://circulars.siemens.com/documents/CircularDownload.aspx?ID=SC_186.pdf) and the pertinent explanatory documents.
 
-**Specific Principles**
+Specific Principles**
 
 Besides the [general principles](#_Guidance_on_general) and [possibly country or industry specific requirements](#_1.5._Specific_Requirements*), Other Contributions without Consideration shall comply with the following additional standards:
 
