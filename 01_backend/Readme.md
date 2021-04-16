@@ -12,6 +12,8 @@
 
 ### useful links
 whole setup: https://chatbotslife.com/deploying-transformer-models-1350876016f
+tutorial heruko: https://www.tutlinks.com/create-and-deploy-fastapi-app-to-heroku/
+tutorial fastAPI: https://towardsdatascience.com/create-your-first-rest-api-in-fastapi-e728ae649a60
 
 ## backend code
 ### pipeline
@@ -23,6 +25,7 @@ whole setup: https://chatbotslife.com/deploying-transformer-models-1350876016f
 - chnage the start_sequence if needed 
 - chnage the restart_sequence if needed 
 - change the parameters of the request if neede
+- run $uvicorn main:app --reload$ to invoke the Uvicorn server (= make endpoint alive); options: uvicorn --port 5000 --host 127.0.0.1 main:app --reload
 
 ### functions
     aks

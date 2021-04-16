@@ -116,11 +116,11 @@ class Query(BaseModel):
     answer_out: Optional[str] = None
     
 
-class ContactOut(BaseModel):
-    contact_id:int
-    first_name:str
-    last_name:str
-    user_name:str
+# class ContactOut(BaseModel):
+#     contact_id:int
+#     first_name:str
+#     last_name:str
+#     user_name:str
 
 ## endpoints 
 @app.post('/send_question')
