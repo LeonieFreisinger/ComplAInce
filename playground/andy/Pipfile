@@ -9,6 +9,8 @@ openai = "*"
 python-dotenv = "*"
 markdown = "*"
 bs4 = "*"
+fastapi = "*"
+pydantic = "*"
 
 [dev-packages]
 

@@ -9,6 +9,7 @@ uvicorn = "*"
 pydantic = "*"
 openai = "*"
 python-dotenv = "*"
+jsonlines = "*"
 
 [dev-packages]
 
