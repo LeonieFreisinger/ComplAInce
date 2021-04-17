@@ -7,7 +7,7 @@
         <img src="../assets/logo.png" class="chatbot--content__logo-logo" />
       </div>
       <div class="chatbot--content__chat">
-        <div class="chatbot--content__chat-content" v-for="message in chatContent" :key="Number(message.timestamp)">
+        <div class="chatbot--content__chat-content" v-for="message, i in chatContent" :key="i">
           <div class="chatbot--content__chat-message_bot" v-if="message.author === 'Chatbot'">
             <p :style="{ color: 'white' }">{{ message.body }}</p>
           </div>
@@ -16,7 +16,7 @@
           </div>
           <div class="chatbot--content__chat-message_suggestion" v-if="message.author === 'suggestion'">
             <h3>Suggestions:</h3>
-            <div v-for="link in message.body" :key="link.link">
+            <div v-for="link, i in message.body" :key="i">
               <div class="horizontal-line"></div>
               <p :style="{ color: 'black' }">
                 I want to know more about
@@ -28,9 +28,12 @@
       </div>
     </div>
     <div class="chatbot--input">
-      <input class="chatbot--input__input" v-model="chatInput" placeholder="Enter your question here" />
-      <div class="chatbot--input__button" @click="clickOnSend">
-        <img src="../assets/send.png" class="chatbot--input__button-img" />
+      <div v-if="isWaiting" class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      <div class="chatbot--input__div">
+        <input class="chatbot--input__input" v-model="chatInput" placeholder="Enter your question here" />
+        <div class="chatbot--input__button" @click="clickOnSend">
+          <img src="../assets/send.png" class="chatbot--input__button-img" />
+        </div>
       </div>
     </div>
   </div>
@@ -48,7 +51,8 @@ export default {
       author: 'Chatbot',
       timestamp: new Date(),
       body: 'Hi! I am your personal compliance expert. How can I help you?'
-    }
+    },
+    isWaiting: false
   }),
   props: {
     msg: String
@@ -64,6 +68,7 @@ export default {
         timestamp: new Date()
       })
       this.chatInput = ''
+      this.isWaiting = true
       this.scrollToBottom()
       try {
         const { data } = await backend.post('/send-question', {
@@ -71,8 +76,11 @@ export default {
         })
         this.chatContent = [this.initMessage, ...data.data]
         this.scrollToBottom()
+        this.isWaiting = false
       } catch (err) {
         console.error(`Something went wrong due to ${err}`)
+        alert('Something went wrong!')
+        this.isWaiting = false
       }
     },
     scrollToBottom() {
@@ -117,9 +125,14 @@ p
     padding: 8px
     bottom: 0
     width: calc(100% - 16px)
-    display: flex
-    height: 30px
+    height: 40px
     background-color: #eee
+
+    &__div
+      display: flex
+      position: absolute
+      bottom: 8px
+      width: calc(100% - 16px)
 
     &__input
       flex: 9
@@ -149,15 +162,15 @@ p
   &--content
     padding: 8px
     overflow: scroll
-    height: 450px
-    margin-bottom: 30px
+    height: 430px
+    margin-bottom: 60px
 
     &__chat
       &-message
         &_user
           padding: 10px 15px 10px 15px
           margin-bottom: 10px
-          background-color: #aaa
+          background: linear-gradient(58deg, rgba(170,170,170,1) 0%, rgba(201,201,201,1) 100%)
           border-radius: 20px 0 20px 20px
           width: 85%
           margin-left: 4%
@@ -180,7 +193,7 @@ p
         &_bot
           padding: 10px 15px 10px 15px
           margin-bottom: 10px
-          background-color: #169999
+          background: linear-gradient(140deg, rgba(22,153,153,1) 30%, rgba(56,195,214,1) 100%)
           border-radius: 0 20px 20px 20px
           width: 85%
           -webkit-animation: fadein 1s
@@ -209,4 +222,56 @@ p
     opacity: 0
   to
     opacity: 1
+
+.lds-ellipsis
+  display: inline-block
+  position: absolute
+  height: 10px
+  width: 56px
+  left: 50%
+  transform: translateX(-70%)
+
+.lds-ellipsis div 
+  position: absolute
+  top: 0px
+  width: 5px
+  height: 5px
+  border-radius: 50%
+  background: #444
+  animation-timing-function: cubic-bezier(0, 1, 1, 0)
+
+.lds-ellipsis div:nth-child(1)
+  left: 8px
+  animation: lds-ellipsis1 1s infinite
+
+.lds-ellipsis div:nth-child(2)
+  left: 8px
+  animation: lds-ellipsis2 1s infinite
+
+.lds-ellipsis div:nth-child(3)
+  left: 32px
+  animation: lds-ellipsis2 1s infinite
+
+.lds-ellipsis div:nth-child(4)
+  left: 56px
+  animation: lds-ellipsis3 1s infinite
+
+@keyframes lds-ellipsis1
+  0%
+    transform: scale(0)
+  100%
+    transform: scale(1)
+
+@keyframes lds-ellipsis3
+  0%
+    transform: scale(1)
+  100%
+    transform: scale(0)
+
+@keyframes lds-ellipsis2
+  0%
+    transform: translate(0, 0)
+  100%
+    transform: translate(24px, 0)
+
 </style>

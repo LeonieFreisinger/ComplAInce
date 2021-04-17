@@ -11,6 +11,7 @@ markdown = "*"
 bs4 = "*"
 fastapi = "*"
 pydantic = "*"
+mammoth = "*"
 
 [dev-packages]
 
