@@ -1,0 +1,19 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = "*"
+pydantic = "*"
+openai = "*"
+python-dotenv = "*"
+jsonlines = "*"
+bs4 = "*"
+markdown = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
