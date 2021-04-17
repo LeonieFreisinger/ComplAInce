@@ -29,7 +29,7 @@ class GPT3():
             max_rerank=100,
             return_metadata=True
         )
-        # sort by score from small to large
+        # sort by score from high to low
         return sorted(response.data, key=lambda el: el.score, reverse=True)
 
     def ask(self, question, chat_log=None):
@@ -136,5 +136,5 @@ if __name__ == "__main__":
     # chat_log = append_interaction_to_chat_log(question_2, answer_2, chat_log)
     gpt3 = GPT3()
     # gpt3.convert_and_upload_file('./data/raw')
-    documents = gpt3.search('I want to send a gift to one of our clients. Is this allowed?')
-    # print(documents)
+    documents = gpt3.get_answer('I want to send a gift to one of our clients. Is this allowed?')
+    print(documents)

@@ -22,7 +22,7 @@ class Query(BaseModel):
 
 @app.post('/send-question')
 async def send_question(query: Query):
-    print(query.question)
-    return 'yo'
+    # print(query.question)
+    # return 'yo'
     return gpt3.get_answer(query.question)
     # answer_api = gpt3.ask(query.question, SESSION_PROMPT)
