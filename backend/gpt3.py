@@ -20,6 +20,7 @@ class GPT3():
 
     def get_answer(self, question):
         documents = self._search(question)
+        return
 
     def _search(self, question):
         response = openai.Engine('ada').search(
@@ -112,11 +113,11 @@ class GPT3():
                 file.write(chunk)
 
         try:
-            openai.File.create(
+            response = openai.File.create(
                 file=open(jsonl_filepath),
                 purpose='search'
             )
-            print('Success')
+            print('Success: ', response)
         except:
             raise Exception('Something went wrong!')
 
@@ -135,6 +136,14 @@ if __name__ == "__main__":
     # print("answer2: ",answer_2)
     # chat_log = append_interaction_to_chat_log(question_2, answer_2, chat_log)
     gpt3 = GPT3()
-    # gpt3.convert_and_upload_file('./data/raw')
-    documents = gpt3.search('I want to send a gift to one of our clients. Is this allowed?')
-    # print(documents)
+    #^gpt3.convert_and_upload_file('./data/raw')
+    # documents = gpt3.ask("Is this allowed to send a gift?")
+    response = gpt3.get_answer("Is this allowed to send a gift?")
+    # question = "Is this allowed to send a gift?"
+    # response = openai.Engine('ada').search(
+    #         search_model="ada",
+    #         file=GPT3_FILE,
+    #         query=question,
+    #         max_rerank=100,
+    #         return_metadata=True
+    # )
