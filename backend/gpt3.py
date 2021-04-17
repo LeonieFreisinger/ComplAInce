@@ -4,9 +4,10 @@ import os
 import jsonlines
 
 from config import (
-    START_SEQUENCE,
-    RESTART_SEQUENCE,
-    SESSION_PROMPT,
+    GPT3_START_SEQUENCE,
+    GPT3_RESTART_SEQUENCE,
+    GPT3_CONTEXT,
+    GPT3_EXAMPLES,
     GPT3_DOCUMENT_SIZE,
     GPT3_FILE,
     FILE_NAME
@@ -20,6 +21,9 @@ class GPT3():
 
     def get_answer(self, question):
         documents = self._search(question)
+        answer = self._completion(question, documents[0])
+        print(answer)
+        return answer
 
     def _search(self, question):
         response = openai.Engine('ada').search(
@@ -32,7 +36,7 @@ class GPT3():
         # sort by score from high to low
         return sorted(response.data, key=lambda el: el.score, reverse=True)
 
-    def ask(self, question, chat_log=None):
+    def _completion(self, question, document):
         """
         this function ask a question to the gpt3 enigne
         input: 
@@ -43,36 +47,39 @@ class GPT3():
         story - str
 
         """
-        prompt_text = f'{chat_log}{RESTART_SEQUENCE}{question}{START_SEQUENCE}'
+        prompt_text = f'{GPT3_CONTEXT} ### {document.text} ### {GPT3_EXAMPLES} ### {GPT3_START_SEQUENCE} {question} {GPT3_RESTART_SEQUENCE}'
         response = openai.Completion.create(
-            engine="davinci",
+            engine="davinci-instruct-beta",
             prompt=prompt_text,
-            temperature=0.8,
-            max_tokens=150,
+            max_tokens=100,
+            temperature=0.0,
             top_p=1,
-            frequency_penalty=0,
-            presence_penalty=0.3,
-            stop=["\n"]
+            n=1,
+            stream=False,
+            stop=["\n", "<|endoftext|>", "\n\nClient:"],
+            echo=False,
+            presence_penalty=0.8,
+            frequency_penalty=1
         )
         story = response['choices'][0]['text']
         return str(story)
 
-    def append_interaction_to_chat_log(self, question, answer, chat_log=None):
-        """
-        this function concatinates the new question and answer to the chatlog
-        input: 
-        question - str
-        answer - str
-        chat_log - str
+    # def append_interaction_to_chat_log(self, question, answer, chat_log=None):
+    #     """
+    #     this function concatinates the new question and answer to the chatlog
+    #     input: 
+    #     question - str
+    #     answer - str
+    #     chat_log - str
 
-        output:
-        response - str
+    #     output:
+    #     response - str
 
-        """
-        if chat_log is None: 
-            chat_log = SESSION_PROMPT 
-        new_chat_log = f'{chat_log}{RESTART_SEQUENCE} {question}{START_SEQUENCE}{answer}'
-        return new_chat_log
+    #     """
+    #     if chat_log is None: 
+    #         chat_log = SESSION_PROMPT 
+    #     new_chat_log = f'{chat_log}{RESTART_SEQUENCE} {question}{START_SEQUENCE}{answer}'
+    #     return new_chat_log
 
     def convert_and_upload_file(self, filepath):
         """
