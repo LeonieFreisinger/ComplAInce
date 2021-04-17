@@ -2,7 +2,10 @@ import openai
 from dotenv import load_dotenv
 import os
 import jsonlines
+import json
+from datetime import datetime
 
+from models import Message
 from config import (
     GPT3_START_SEQUENCE,
     GPT3_RESTART_SEQUENCE,
@@ -10,7 +13,8 @@ from config import (
     GPT3_EXAMPLES,
     GPT3_DOCUMENT_SIZE,
     GPT3_FILE,
-    FILE_NAME
+    FILE_NAME,
+    SUGGESTION_COUNT
 )
 
 load_dotenv()
@@ -19,24 +23,28 @@ class GPT3():
     def __init__(self):
         openai.api_key = os.getenv("OPENAI_API_KEY")
 
-    def get_answer(self, question):
+    def get_answer(self, chatContent):
+        history = chatContent[:-1]
+        question = chatContent[-1]
         documents = self._search(question)
-        answer = self._completion(question, documents[0])
-        print(answer)
-        return answer
+        answer = self._completion(question, history, documents[0])
+        chatContent.append(answer)
+        suggestion = self._search_keywords(answer, documents[0].metadata)
+        chatContent.append(suggestion)
+        return chatContent
 
     def _search(self, question):
         response = openai.Engine('ada').search(
             search_model="ada",
             file=GPT3_FILE,
-            query=question,
+            query=question.body,
             max_rerank=100,
             return_metadata=True
         )
         # sort by score from high to low
         return sorted(response.data, key=lambda el: el.score, reverse=True)
 
-    def _completion(self, question, document):
+    def _completion(self, question, history, document):
         """
         this function ask a question to the gpt3 enigne
         input: 
@@ -47,7 +55,15 @@ class GPT3():
         story - str
 
         """
-        prompt_text = f'{GPT3_CONTEXT} ### {document.text} ### {GPT3_EXAMPLES} ### {GPT3_START_SEQUENCE} {question} {GPT3_RESTART_SEQUENCE}'
+        dialog = ''
+        for message in history:
+            if message.author == 'user':
+                dialog = f'{dialog} {GPT3_START_SEQUENCE} {message.body}'
+            elif message.author == 'Chatbot':
+                dialog = f'{dialog} {GPT3_RESTART_SEQUENCE} {message.body}'
+        if dialog != '':
+            dialog += ' '
+        prompt_text = f'{GPT3_CONTEXT} ### {document.text} ### {GPT3_EXAMPLES} \n### {dialog}{GPT3_START_SEQUENCE} {question.body} {GPT3_RESTART_SEQUENCE}'
         response = openai.Completion.create(
             engine="davinci-instruct-beta",
             prompt=prompt_text,
@@ -62,24 +78,48 @@ class GPT3():
             frequency_penalty=1
         )
         story = response['choices'][0]['text']
-        return str(story)
+        out = Message(
+            body=story,
+            author='Chatbot',
+            timestamp=datetime.now()
+        )
+        return out
 
-    # def append_interaction_to_chat_log(self, question, answer, chat_log=None):
-    #     """
-    #     this function concatinates the new question and answer to the chatlog
-    #     input: 
-    #     question - str
-    #     answer - str
-    #     chat_log - str
+    def _search_keywords(self, query, metadata):
+        with open('data/chapter_links.json', 'r') as file:
+            chapter_links = json.load(file)
 
-    #     output:
-    #     response - str
+        # remove metadata number
+        metadata = metadata.split('-')[0]
+        # find in which chapter we are
+        chapter_titles = [el['chapter'] for el in chapter_links]
+        index = chapter_titles.index(metadata)
+        link_chapter_pair = chapter_links[index]['data']
+        documents = [el['link_text'] if el['link_text'] != None else '' for el in link_chapter_pair ]
+        print(documents)
 
-    #     """
-    #     if chat_log is None: 
-    #         chat_log = SESSION_PROMPT 
-    #     new_chat_log = f'{chat_log}{RESTART_SEQUENCE} {question}{START_SEQUENCE}{answer}'
-    #     return new_chat_log
+        response = openai.Engine('ada').search(
+            search_model="ada",
+            documents=documents,
+            query=query.body,
+            max_rerank=100,
+            return_metadata=True
+        )
+        # sort by score from high to low
+        response = sorted(response.data, key=lambda el: el.score, reverse=True)
+        print(response)
+        best_index = [doc.document for doc in response[:SUGGESTION_COUNT]]
+
+        best_link_chapter_pair = []
+        for i in best_index:
+            best_link_chapter_pair.append(link_chapter_pair[i])
+        
+        out = Message(
+            author="suggestion",
+            body=best_link_chapter_pair,
+            timestamp=datetime.now()
+        )
+        return out
 
     def convert_and_upload_file(self, filepath):
         """
@@ -119,11 +159,11 @@ class GPT3():
                 file.write(chunk)
 
         try:
-            openai.File.create(
+            response = openai.File.create(
                 file=open(jsonl_filepath),
                 purpose='search'
             )
-            print('Success')
+            print('Success ', response)
         except:
             raise Exception('Something went wrong!')
 

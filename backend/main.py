@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel
 
 from gpt3 import GPT3
+from models import Query
 
 app = FastAPI() #app is an instance of teh class FastAPI()
 origins = ['*']
@@ -15,12 +15,12 @@ app.add_middleware(
 )
 
 gpt3 = GPT3()
-class Query(BaseModel):
-    question: str
 
 @app.post('/send-question')
 async def send_question(query: Query):
-    answer = gpt3.get_answer(query.question)
-    return {
-        "answer": answer
-    }
+    query.chatContent.pop(0)
+    out = gpt3.get_answer(query.chatContent)
+    return { "data": out }
+    # return {
+    #     "answer": answer
+    # }

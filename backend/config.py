@@ -5,3 +5,4 @@ GPT3_CONTEXT = "This is an AI chatbot expert in the field of compliance and lega
 GPT3_DOCUMENT_SIZE = 800
 GPT3_FILE = "file-8PmxRxA6sx7yhC8GUDZOgdNV"
 FILE_NAME = "siemens_compliance.jsonl"
+SUGGESTION_COUNT = 4
