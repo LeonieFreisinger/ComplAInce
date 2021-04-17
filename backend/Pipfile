@@ -10,6 +10,8 @@ pydantic = "*"
 openai = "*"
 python-dotenv = "*"
 jsonlines = "*"
+mammoth = "*"
+pandoc = "*"
 
 [dev-packages]
 

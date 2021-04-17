@@ -8,6 +8,8 @@ regex = "*"
 mdutils = "*"
 lxml = "*"
 markdown = "*"
+cdifflib = "*"
+mammoth = "*"
 
 [dev-packages]
 
