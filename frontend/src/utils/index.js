@@ -1,6 +1,6 @@
 import axios from 'axios'
 
 export const backend = axios.create({
-  baseURL: process.env.VUE_APP_BACKEND_URL,
-  timeout: 5000
+  baseURL: 'http://localhost:8000',
+  timeout: 30000
 })

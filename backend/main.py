@@ -1,10 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import logging
 
-from pydantic import BaseModel
-
-from config import SESSION_PROMPT
 from gpt3 import GPT3
+from models import Query
 
 app = FastAPI() #app is an instance of teh class FastAPI()
 origins = ['*']
@@ -17,12 +16,13 @@ app.add_middleware(
 )
 
 gpt3 = GPT3()
-class Query(BaseModel):
-    question: str
 
 @app.post('/send-question')
 async def send_question(query: Query):
-    print(query.question)
-    return 'yo'
-    return gpt3.get_answer(query.question)
-    # answer_api = gpt3.ask(query.question, SESSION_PROMPT)
+    logging.info('Received query!')
+    query.chatContent.pop(0)
+    out = gpt3.get_answer(query.chatContent)
+    return { "data": out }
+    # return {
+    #     "answer": answer
+    # }
