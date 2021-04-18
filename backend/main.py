@@ -23,6 +23,3 @@ async def send_question(query: Query):
     query.chatContent.pop(0)
     out = gpt3.get_answer(query.chatContent)
     return { "data": out }
-    # return {
-    #     "answer": answer
-    # }

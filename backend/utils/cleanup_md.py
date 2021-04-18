@@ -28,7 +28,7 @@ def clean_up(raw):
     raw = markdown_to_text(raw)
     raw = raw.split('&quot;')
     raw = ' '.join(raw)
-    raw = raw.split('&39;')
+    raw = raw.split('\&39;')
     raw = '\''.join(raw)
     raw = re.sub(r"(?:__|[*#])|\[(.*?)\]\(.*?\)", '', raw)
     raw = raw.split('|')

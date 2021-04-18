@@ -78,21 +78,30 @@ class GPT3():
             content = ''
         else:
             content = document.text
-        prompt_text = f'{GPT3_CONTEXT} ### {content} ### {GPT3_EXAMPLES} \n### {dialog}{GPT3_START_SEQUENCE} {question.body} {GPT3_RESTART_SEQUENCE}'
+        prompt_text = f'{GPT3_CONTEXT} ###\n{content}\n### {GPT3_EXAMPLES} \n### {dialog}{GPT3_START_SEQUENCE} {question.body} {GPT3_RESTART_SEQUENCE}'
+        print(prompt_text)
         response = openai.Completion.create(
             engine="davinci-instruct-beta",
             prompt=prompt_text,
             max_tokens=100,
-            temperature=0.1,
+            temperature=0.3,
             top_p=1,
             n=1,
             stream=False,
-            stop=["\n", "<|endoftext|>", "\n\nClient:"],
+            stop=["\n", "###", "\n\nClient:"],
             echo=False,
-            presence_penalty=0.8,
-            frequency_penalty=1
+            presence_penalty=0,
+            frequency_penalty=0
         )
         story = response['choices'][0]['text']
+
+        # filter out sentences that have not ended
+        if not ('.' in story[-3:] or '!' in story[-3:] or '?' in story[-3:]):
+            logging.warning('Answer has not ended properly...')
+            story = story.split('.')[:-1]
+            story = '.'.join(story) + '.'
+        print(story)
+
         out = Message(
             body=story,
             author='Chatbot',
@@ -109,31 +118,37 @@ class GPT3():
         metadata = metadata.split('-')[0]
         # find in which chapter we are
         chapter_titles = [el['chapter'][:-5] for el in chapter_links]
+        print(chapter_titles)
         if not metadata in chapter_titles:
             logging.warn('Chapter was not found in chapter link list...')
             return False
         index = chapter_titles.index(metadata)
-        link_chapter_pair = chapter_links[index]['data']
-        if len(link_chapter_pair) == 0:
-            logging.warn('No data in chapter of chapter link list...')
-            return False
-        documents = [el['link_text'] if el['link_text'] != None else '' for el in link_chapter_pair ]
+        best_link_chapter_pair = [{
+            'link': '',
+            'link_text': ''.join(chapter_titles[index].split('.')[1:]).strip()
+        }]
+        # FIX: Suggestion part is not really working
+        # link_chapter_pair = chapter_links[index]['data']
+        # if len(link_chapter_pair) == 0:
+        #     logging.warn('No data in chapter of chapter link list...')
+        #     return False
+        # documents = [el['link_text'] if el['link_text'] != None else '' for el in link_chapter_pair ]
 
-        response = openai.Engine('ada').search(
-            search_model="ada",
-            documents=documents,
-            query=query.body,
-            max_rerank=100,
-            return_metadata=True
-        )
-        # sort by score from high to low
-        response = sorted(response.data, key=lambda el: el.score, reverse=True)
-        print(response[:3])
-        best_index = [doc.document for doc in response[:SUGGESTION_COUNT]]
+        # response = openai.Engine('ada').search(
+        #     search_model="ada",
+        #     documents=documents,
+        #     query=query.body,
+        #     max_rerank=100,
+        #     return_metadata=True
+        # )
+        # # sort by score from high to low
+        # response = sorted(response.data, key=lambda el: el.score, reverse=True)
+        # print(response[:3])
+        # best_index = [doc.document for doc in response[:SUGGESTION_COUNT]]
 
-        best_link_chapter_pair = []
-        for i in best_index:
-            best_link_chapter_pair.append(link_chapter_pair[i])
+        # best_link_chapter_pair = []
+        # for i in best_index:
+        #     best_link_chapter_pair.append(link_chapter_pair[i])
         
         out = Message(
             author="suggestion",
@@ -179,7 +194,10 @@ class GPT3():
         with jsonlines.open(jsonl_filepath, mode='a') as file:
             for chunk in text_chunk:
                 file.write(chunk)
+        
+        self.upload_file(jsonl_filepath)
 
+    def upload_file(self, jsonl_filepath):
         try:
             response = openai.File.create(
                 file=open(jsonl_filepath),
@@ -192,4 +210,11 @@ class GPT3():
 if __name__ == "__main__":
     # Upload new files
     gpt3 = GPT3()
-    gpt3.convert_and_upload_file('./data/raw_txt')
+    # gpt3.convert_and_upload_file('./data/raw_txt')
+    gpt3.upload_file('data/siemens_compliance.jsonl')
+    # answer = [Message(
+    #     author='user',
+    #     body='Am I allowed to receive any gifts?',
+    #     timestamp=datetime.now()
+    # )]
+    # gpt3.get_answer(answer)

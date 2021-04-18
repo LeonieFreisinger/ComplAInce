@@ -1,4 +1,9 @@
-# Project: Chatbot 
+# Project: Chatbot
+
+## Quickstart
+1. Activate pipenv shell `pipenv shell`
+2. Install all dependencies `pipenv install`
+3. 
 
 ## Structure
 1. general
@@ -23,8 +28,8 @@ pipenv commands: https://realpython.com/pipenv-guide/
     placeholder for text input
 ### usage
 - change the session_prompt if needed
-- chnage the start_sequence if needed 
-- chnage the restart_sequence if needed 
+- change the start_sequence if needed 
+- change the restart_sequence if needed 
 - change the parameters of the request if neede
 - run $uvicorn main:app --reload$ to invoke the Uvicorn server (= make endpoint alive); options: uvicorn --port 5000 --host 127.0.0.1 main:app --reload
 
