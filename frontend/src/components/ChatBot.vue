@@ -16,11 +16,11 @@
           </div>
           <div class="chatbot--content__chat-message_suggestion" v-if="message.author === 'suggestion'">
             <h3>Suggestions:</h3>
-            <div v-for="link, i in message.body" :key="i">
+            <div v-for="link, j in message.body" :key="j" @click="clickOnSuggestions(i, j)" :style="{ 'cursor': 'pointer' }">
               <div class="horizontal-line"></div>
               <p :style="{ color: 'black' }">
                 I want to know more about
-                <a :href="link.link" target="_blank" :style="{ 'text-decoration': 'solid', 'color': '#169999', 'font-weight': 700 }">{{ link.link_text }}</a>
+                <a :style="{ 'text-decoration': 'solid', 'color': '#169999', 'font-weight': 700 }">{{ link.link_text }}</a>
               </p>
             </div>
           </div>
@@ -70,6 +70,9 @@ export default {
       this.chatInput = ''
       this.isWaiting = true
       this.scrollToBottom()
+      await this.fetchAnswer()
+    },
+    async fetchAnswer() {
       try {
         const { data } = await backend.post('/send-question', {
           chatContent: this.chatContent
@@ -88,7 +91,17 @@ export default {
         const container = this.$el.querySelector("#content")
         container.scrollTop = container.scrollHeight
       }, 100)
-
+    },
+    async clickOnSuggestions(msgIndex, suggestionIndex) {
+      const { link_text } = this.chatContent[msgIndex].body[suggestionIndex]
+      this.chatContent.push({
+        body: `I want to know more about ${link_text}`,
+        author: 'user',
+        timestamp: new Date()
+      })
+      this.isWaiting = true
+      this.scrollToBottom()
+      await this.fetchAnswer()
     }
   },
   mounted() {
