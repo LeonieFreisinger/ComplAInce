@@ -12,6 +12,8 @@ python-dotenv = "*"
 jsonlines = "*"
 bs4 = "*"
 markdown = "*"
+mammoth = "*"
+pandoc = "*"
 
 [dev-packages]
 
