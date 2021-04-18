@@ -3,7 +3,8 @@
 ## Quickstart
 1. Activate pipenv shell `pipenv shell`
 2. Install all dependencies `pipenv install`
-3. 
+3. If initial start run `python -m gpt3` to upload files to openai
+4. Run `uvicorn main:app --reload`
 
 ## Structure
 1. general
